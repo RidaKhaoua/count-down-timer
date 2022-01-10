@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  box-sizing: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  min-height: 100vh;
+  background-image: url("img/pexels-aarti-vijay-2693529.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container,
+h1 .title {
+  color: white;
+}
+
+.container ul li {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 6px;
+  position: relative;
+  height: 150px;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px 10px 0;
+}
+
+.container ul li::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: white;
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid #ccc;
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+
+.container ul li:first-child::before {
+  content: "days";
+}
+
+.container ul li:nth-child(2):before {
+  content: "hours";
+}
+
+.container ul li:nth-child(3)::before {
+  content: "minutes";
+}
+
+.container ul li:last-child::before {
+  content: "secondes";
+}
